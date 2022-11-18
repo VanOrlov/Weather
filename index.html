@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Training Js</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-case">
+            <input placeholder="Введите Город" class="input" type="text">
+            <button class="button">Получить погоду</button>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="result" id="result1"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="result"  id="result2"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="result"  id="result3"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
