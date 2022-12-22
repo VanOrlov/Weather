@@ -61,22 +61,22 @@ function clouds (res){
     const icons = document.querySelectorAll('.img-weather')
     if(res.data.weather[0].main == 'Snow'){
         for (const iterator of icons) {
-            iterator.src = '../img/menu icon/snow.png'
+            iterator.src = '../img/menuicon/snow.png'
         }
     }
     else if(res.data.weather[0].main == 'Clear'){
         for (const iterator of icons) {
-            iterator.src = '../img/menu icon/Sun.png'
+            iterator.src = '../img/menuicon/Sun.png'
         }
     }
     else if (res.data.weather[0].main == 'Clouds'){
         for (const iterator of icons) {
-            iterator.src = '../img/menu icon/clouds.png'
+            iterator.src = '../img/menuicon/clouds.png'
         }
     }
     else if(res.data.weather[0].main == 'Rain'){
         for (const iterator of icons) {
-            iterator.src = '../img/menu icon/rain.png'
+            iterator.src = '../img/menuicon/rain.png'
         }
     }
 }
