@@ -8,7 +8,7 @@ btn.addEventListener('click', () => {
     if(gorod.value){
         localStorage.setItem('city', gorod.value)
         let localCity = localStorage.getItem('city')
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${localCity}&lang=ru&units=metric&appid=${apiKey}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${localCity}&lang=ru&units=metric&appid=${apiKey}`;
         let deg = document.querySelector('.weather-deg')
         let city = document.querySelector('.weather-city')
         let under = document.querySelector('.under-value')
@@ -146,7 +146,7 @@ function init(lat, lon){
 document.addEventListener("DOMContentLoaded", () => {
     console.log(123);
     let localCity = localStorage.getItem('city')
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${localCity}&lang=ru&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${localCity}&lang=ru&units=metric&appid=${apiKey}`;
     let deg = document.querySelector('.weather-deg')
     let city = document.querySelector('.weather-city')
     let under = document.querySelector('.under-value')
