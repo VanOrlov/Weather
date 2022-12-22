@@ -9,25 +9,81 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="wrapper-case">
-            <input placeholder="Введите Город" class="input" type="text">
-            <button class="button">Получить погоду</button>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="result" id="result1"></div>
+        <div class="menu">
+            <div class="search-city">
+                <input placeholder="Search city..." type="text" class="search">
+                <button class="search-button">↺</button>
+            </div>
+            <div class="error error-none">Такого города не найдено</div>
+            <div class="img-big">
+                <img src="img/menu icon/clouds.png" alt="" class="img-weather">
+            </div>
+            <div class="weather">
+                <div class="weather-deg">0</div>
+                <div class="weather-city"></div>
+            </div>
+            <div class="under-weather">
+                <div class="under-icon">
+                    <img class="img-weather" src="img/menu icon/clouds.png" alt="">
+                </div>
+                <div class="under-value"></div>
+            </div>
+        </div>
+        <div class="main-information">
+            <div class="information-container">
+                <div class="information-card">
+                    <div class="information-name">
+                        Скорость ветра
                     </div>
-                    <div class="swiper-slide">
-                        <div class="result"  id="result2"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="result"  id="result3"></div>
+                    <div class="information-value">0 м/с</div>
+                    <div class="information-under">
+                        Лёгкий бриз
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="information-card">
+                    <div class="information-name">
+                        Видимость
+                    </div>
+                    <div class="information-value">0 км</div>
+                    <div class="information-under">
+                        Хорошая видимость
+                    </div>
+                </div>
+                <div class="information-card">
+                    <div class="information-name">
+                        Мин./Макс. Температура
+                    </div>
+                    <div class="temp-container">
+                        <img class="temp-icon" src="img/temp/min.png" alt="">
+                        <div class="temp-value">0°C</div>
+                    </div>
+                    <div class="temp-container">
+                        <img class="temp-icon" src="img/temp/max.png" alt="">
+                        <div class="temp-value">0°C</div>
+                    </div>
+                </div>
+                <div class="information-card">
+                    <div class="information-name">
+                        Восход/Закат солнца
+                    </div>
+                    <div class="temp-container">
+                        <img class="temp-icon" src="img/sun/rise.png" alt="">
+                        <div class="temp-value">00:00</div>
+                    </div>
+                    <div class="temp-container">
+                        <img class="temp-icon" src="img/sun/set.png" alt="">
+                        <div class="temp-value">10:00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <div class="map">
+                    <div id="map"></div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cf4a012e-72c0-43fc-a8e7-c415df80017d&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
