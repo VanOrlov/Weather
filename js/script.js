@@ -144,13 +144,11 @@ function init(lat, lon){
 
 // НАЧАЛЬНАЯ ЗАГРУЗКА СТРАНИЦЫ(Берём данные из localStorage)
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(123);
     let localCity = localStorage.getItem('city')
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${localCity}&lang=ru&units=metric&appid=${apiKey}`;
     let deg = document.querySelector('.weather-deg')
     let city = document.querySelector('.weather-city')
     let under = document.querySelector('.under-value')
-    document.querySelector('.error').classList.add('error-none')
     axios.get(url).then(res => {
         //setTimeout для того, чтобы промис ymaps успевал сделать запрос, без этого решения не успевает(отладка загрузки данных на 200мс)
         setTimeout(() => { 
@@ -168,3 +166,4 @@ document.addEventListener("DOMContentLoaded", () => {
         },400)
     })
 })
+
